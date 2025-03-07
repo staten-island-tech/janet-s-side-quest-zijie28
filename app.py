@@ -13,10 +13,20 @@ def csv_to_list(file_path):
 
 file_path = "SalesData.csv"  
 data = csv_to_list(file_path)
-print(data)  # Output the list
+  # Output the list
+all_sales=0
+print(data)
+def func():
+    for stores in data:
+        sales=stores[0:]
+        print(sales)
+        for daily_sales in sales:
+            all_sales+=daily_sales
+            length=len(sales)
+            avg=all_sales/length
+            print(f"{data[0]}: {avg}")
 
-
-
+func()
 
     
 
